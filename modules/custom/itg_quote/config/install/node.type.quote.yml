@@ -1,0 +1,14 @@
+# node.type.quote.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - foobar # This is the name of the module we're using for this example
+name: 'Quote'
+type: quote
+description: 'Content type used for create quote'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,24 @@
+# field.field.node.quote.name_person.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.quote.name_person
+        - node.type.qoute
+    module:
+        - text
+        - user
+id: node.qoute.default
+targetEntityType: node
+bundle: qoute
+mode: default
+content:
+    field_name_person:
+        label: Name person
+        type: text_default
+        weight: 101
+        settings: {  }
+        third_party_settings: {  }
+    links:
+        weight: 100
+hidden: {  }

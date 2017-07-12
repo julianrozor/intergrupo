@@ -1,0 +1,24 @@
+# field.field.node.quote.date_quote.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.quote.date_quote
+        - node.type.qoute
+    module:
+        - text
+        - user
+id: node.qoute.default
+targetEntityType: node
+bundle: qoute
+mode: default
+content:
+    field_date_quote:
+        label: Date quote
+        type: datetime
+        weight: 101
+        settings: {  }
+        third_party_settings: {  }
+    links:
+        weight: 100
+hidden: {  }

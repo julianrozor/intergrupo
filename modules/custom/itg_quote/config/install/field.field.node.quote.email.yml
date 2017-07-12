@@ -1,0 +1,24 @@
+# field.field.node.quote.email.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.quote.email
+        - node.type.qoute
+    module:
+        - text
+        - user
+id: node.qoute.default
+targetEntityType: node
+bundle: qoute
+mode: default
+content:
+    field_email:
+        label: Mail
+        type: text_default
+        weight: 101
+        settings: {  }
+        third_party_settings: {  }
+    links:
+        weight: 100
+hidden: {  }
