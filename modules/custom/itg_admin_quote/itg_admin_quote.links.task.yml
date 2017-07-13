@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+quote.settings_tab:
+  route_name: itg_admin_quote.contact_settings
+  title: Settings
+  base_route: itg_admin_quote.contact_settings
+
+quote.view:
+  route_name: entity.itg_admin_quote.canonical
+  base_route: entity.itg_admin_quote.canonical
+  title: View
+
+quote.page_edit:
+  route_name: entity.itg_admin_quote.edit_form
+  base_route: entity.itg_admin_quote.canonical
+  title: Edit
+
+quote.delete_confirm:
+  route_name:  entity.itg_admin_quote.delete_form
+  base_route:  entity.itg_admin_quote.canonical
+  title: Delete
+  weight: 10

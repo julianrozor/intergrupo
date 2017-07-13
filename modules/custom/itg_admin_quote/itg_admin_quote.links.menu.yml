@@ -1,0 +1,12 @@
+# Define the menu links for this module
+
+entity.itg_admin_quote.collection:
+  title: 'Quote Listing'
+  route_name: entity.itg_admin_quote.collection
+  description: 'List Contacts'
+  weight: 10
+itg_admin_quote.admin.structure.settings:
+  title: Quote Settings
+  description: 'Configure Quote entity'
+  route_name:  itg_admin_quote.contact_settings
+  parent: system.admin_structure

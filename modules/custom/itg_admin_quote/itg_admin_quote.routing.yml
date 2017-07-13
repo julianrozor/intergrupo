@@ -1,0 +1,59 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.itg_admin_quote.canonical:
+  path: '/itg_admin_quote/{itg_admin_quote}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the contact entity
+    _entity_view: 'itg_admin_quote'
+    _title: 'Quote Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'itg_admin_quote.view'
+
+entity.itg_admin_quote.collection:
+  path: '/quote/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'itg_admin_quote'
+    _title: 'Quote List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view quote entity'
+
+itg_admin_quote.contact_add:
+  path: '/itg_admin_quote_settings/add'
+  defaults:
+  # Calls the form.add controller, defined in the contact entity.
+    _entity_form: itg_admin_quote.add
+    _title: 'Add Quote'
+  requirements:
+   # _permission: 'add quote entity'
+   _entity_create_access: 'itg_admin_quote'
+
+entity.itg_admin_quote.edit_form:
+  path: '/itg_admin_quote/{itg_admin_quote}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the contact entity.
+    _entity_form: itg_admin_quote.edit
+    _title: 'Edit Quote'
+  requirements:
+    _entity_access: 'itg_admin_quote.edit'
+
+entity.itg_admin_quote.delete_form:
+  path: '/contact/{itg_admin_quote}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: itg_admin_quote.delete
+    _title: 'Delete Contact'
+  requirements:
+    _entity_access: 'itg_admin_quote.delete'
+
+itg_admin_quote.contact_settings:
+  path: 'admin/structure/itg_admin_quote_settings'
+  defaults:
+    _form: '\Drupal\itg_admin_quote\Form\QuoteSettingsForm'
+    _title: 'Quote Settings'
+  requirements:
+    _permission: 'administer quote entity'

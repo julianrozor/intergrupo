@@ -1,0 +1,11 @@
+# All action links for this module
+
+itg_admin_quote.contact_add:
+  # Which route will be called by the link
+  route_name: itg_admin_quote.contact_add
+  title: 'Add Quote'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.itg_admin_quote.collection
+    - entity.itg_admin_quote.canonical

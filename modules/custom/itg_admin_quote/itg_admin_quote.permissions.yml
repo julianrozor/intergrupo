@@ -1,0 +1,11 @@
+# add Permissions
+'delete quote entity':
+  title: Delete entity content.
+'add quote entity':
+  title: Add entity content
+'view quote entity':
+  title: View entity content
+'edit quote entity':
+  title: Edit entity content
+'administer quote entity':
+  title: Administer settings

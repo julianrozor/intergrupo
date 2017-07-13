@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains Drupal\itg_admin_quote\itg_admin_quote.module.
+ */
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function itg_admin_quote_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  //verified form edit
+  if($form['#attributes']['data-drupal-selector'] == "itg-admin-quote-edit-form"){
+    //disabled document field;
+    $form['document']['#disabled']= TRUE;
+  };
+}
+
+
+
+// function itg_admin_quote_entity_query_alter(\Drupal\Core\Entity\Query\QueryInterface $query) {
+// }
